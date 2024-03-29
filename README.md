@@ -79,6 +79,7 @@ OBS: Nas configurações do UTM podemos desabilitar seu icone na dock, afinal us
 
 O resultado final deve ser o Docker do Mac completamente integrado a sua VM, sempre que for usar o Docker ligue ela.
 
+https://github.com/nukhes/docker-macos-ryzentosh/assets/79018158/e66ced4e-fcfa-43a6-8f61-4143971c72a7
 
 
 
