@@ -1,6 +1,8 @@
 # docker-in-ryzentosh
 Como usar o Docker em uma máquina AMD rodando o MacOS (Testado no Sonoma 14.4.1).
 
+Eu criei este guia para mostrar uma forma eficiente de usar o Docker em um Ryzentosh, eu rodava ele no VirtualBox 6.1.40 (O último a suportar AMD) que não recebe mais suporte e seu uso necessita do desligamento do System Integrity Protection, agora com o QEMU + UTM existem atualizações e suporte regulares, além de funcionar com todos os recursos de segurança ativados.
+
 # Primeiros Passos
 
 ## Gerenciador de Pacotes Brew
