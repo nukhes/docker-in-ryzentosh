@@ -25,7 +25,9 @@ Com o UTM instalado baixe um sistema Linux de sua preferência, recomendo o [Ubu
 Abra o UTM e crie uma VM com sua ISO, após isso instale o Docker nessa máquina seguindo a [Documentação Oficial](https://docs.docker.com/desktop/install/linux-install/).
 Nas configurações de rede da máquina use Bridge com layer2.
 
-OBS: Se estiver instalando o Ubuntu Server, NÃO instale o Docker em snap, você terá problemas para realizar os ajustes finais.
+
+OBS 1: Veja a [Documentação do Post-Install do Docker](https://docs.docker.com/engine/install/linux-postinstall/), para configurar seu usuário (opcional).
+OBS 2: Se estiver instalando o Ubuntu Server, NÃO instale o Docker em snap, você terá problemas para realizar os ajustes finais.
 
 # Ajustes finos (opcional)
 Aqui darei algumas dicas para integrar esse Docker da VM no Docker do seu MacOS.
@@ -72,6 +74,8 @@ No terminal do MacOS digite:
 echo "export DOCKER_HOST=tcp://remote-docker-host-ip:2375" >> ~/.zshrc
 exit
 ```
+
+OBS: Nas configurações do UTM podemos desabilitar seu icone na dock, afinal usaremos a VM via terminal de qualquer forma, explore todas as opções dessa ferramenta.
 
 O resultado final deve ser o Docker do Mac completamente integrado a sua VM, sempre que for usar o Docker ligue ela.
 
