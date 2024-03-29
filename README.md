@@ -55,6 +55,13 @@ mkdir -p /etc/systemd/system/docker.service.d
 nano /etc/systemd/system/docker.service.d/options.conf
 ```
 
+Ao abir o nano adicione essas linhas no arquivo recém criado:
+```
+[Service]
+ExecStart=
+ExecStart=/usr/bin/dockerd -H unix:// -H tcp://0.0.0.0:2375
+```
+
 Rode os seguites comandos para reiniciar o Docker:
 
 ```
