@@ -1,7 +1,7 @@
 # docker-in-ryzentosh
 Como usar o Docker em uma máquina AMD rodando o MacOS (Testado no Sonoma 14.4.1).
 
-Eu criei este guia para mostrar uma forma eficiente de usar o Docker em um Ryzentosh, eu rodava ele no VirtualBox 6.1.40 (O último a suportar AMD) que não recebe mais suporte e seu uso necessita do desligamento do System Integrity Protection, agora com o QEMU + UTM existem atualizações e suporte regulares, além de funcionar com todos os recursos de segurança ativados.
+Eu criei este guia para mostrar uma forma eficiente de usar o Docker em um Ryzentosh, Até o MacOS BigSur ele rodava no VirtualBox 6.1.40 (O último a suportar AMD) que não recebe mais suporte e seu uso necessita do desligamento do System Integrity Protection (acrescenta uma camada de vulnerabilidade no OS), agora com o QEMU + UTM existem atualizações e suporte regulares, além de funcionar com todos os recursos de segurança ativados.
 
 # Primeiros Passos
 
@@ -21,11 +21,13 @@ brew install docker-compose
 Agora que instalamos o Docker e o QEMU (nossa camada de emulação) vamos configurar uma VM, instale o [UTM](https://mac.getutm.app/) (uma interface gráfica para o QEMU).
 
 ## ISO Linux
-Com o UTM instalado baixe um sistema Linux de sua preferência, recomendo o [Ubuntu Server](https://ubuntu.com/download/server).
+Com o UTM instalado baixe um sistema Linux de sua preferência, recomendo o [Ubuntu Server](https://ubuntu.com/download/server) pela sua boa compatibilidade.
 
 # Criação da máquina virtual
 Abra o UTM e crie uma VM com sua ISO, após isso instale o Docker nessa máquina seguindo a [Documentação Oficial](https://docs.docker.com/desktop/install/linux-install/).
-Nas configurações de rede da máquina use Bridge com layer2.
+
+## Configurações da máquina
+Nas configurações de rede da máquina use Bridge com layer2. Sobre as outras configurações procure alocar recursos suficientes para suas aplicações.
 
 ## Dicas
 - Veja a [Documentação do Post-Install do Docker](https://docs.docker.com/engine/install/linux-postinstall/), para configurar seu usuário (opcional).
